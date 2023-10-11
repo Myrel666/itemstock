@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ItemsController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +24,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     return view('dashboard');
 });
-Route::resource('items', ItemController::class);
+// Route::resource('items', ItemController::class);
+Route::post('/items/store', [ItemsController::class, 'store'])->name('items.store');

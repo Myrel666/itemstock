@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Item;
 use Illuminate\Http\Request;
 
 class ItemsController extends Controller
@@ -22,5 +23,6 @@ class ItemsController extends Controller
 
         return 'Items Inserted Successfully!';
     }
+
 
 }

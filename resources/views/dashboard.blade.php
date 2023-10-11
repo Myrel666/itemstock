@@ -16,7 +16,7 @@
                     </div>
                     <div class="card-body p-4" >
                         <div id="show_alert"></div>
-                        <form action="/add-items" method="POST" id="add_form">
+                        <form action="{{ route('items.store') }}" method="POST" id="add_form">
                             @csrf
                             <div id="show_item">
                                 <div class="row">
@@ -74,7 +74,7 @@
             e.preventDefault();
             $("#add_btn").val('Adding...');
             $.ajax({
-                url: '/add-items',
+                url: '{{ route('items.store') }}',
                 method: 'POST',
                 data: $(this).serialize(),
                 success: function(response){
